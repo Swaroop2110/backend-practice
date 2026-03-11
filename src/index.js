@@ -5,7 +5,13 @@ import { DB_NAME } from "./constants.js";
 import connectDB from "./db/index.js";
 
 dotenv.config({
-    path: './env'
+    // dotenv defaults to loading from a file called ".env" in the
+    // project root. the original code pointed at "./env" (missing the
+    // leading dot) so the variables were never loaded.
+    //
+    // simply remove the path option or use the correct filename.
+    // dotenv.config();
+    path: './.env'
 })
 
 
